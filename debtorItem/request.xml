@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="debtor-item-service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getDebtorItemRequest>
+         <gs:CustomerID>1234</gs:CustomerID>
+      </gs:getDebtorItemRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

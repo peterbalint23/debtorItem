@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="debtor-item-service"
+           targetNamespace="debtor-item-service" elementFormDefault="qualified">
+
+    <xs:element name="getDebtorItemRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CustomerID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDebtorItemResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DebtorItems" type="tns:DebtorItem" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DebtorItem">
+        <xs:sequence>
+            <xs:element name="Amount" type="xs:int"/>
+            <xs:element name="CustomerID" type="xs:string"/>
+            <xs:element name="DueDate" type="xs:date"/>
+            <xs:element name="ReferenceNumber" type="xs:string"/>
+            
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
